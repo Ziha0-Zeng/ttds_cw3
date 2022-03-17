@@ -1,0 +1,229 @@
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sat Mar  5 01:33:00 2022] ***
+compiled with version: Apple LLVM 13.0.0 (clang-1300.0.29.3) on 17 June 2020 09:03:34
+os: Darwin-21.3.0 Darwin Kernel Version 21.3.0: Wed Jan  5 21:37:58 PST 2022; root:xnu-8019.80.24~20/RELEASE_ARM64_T8101
+nodename: pc-201-82.customer.ask4.lan
+machine: arm64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /Users/zihaozeng/Desktop/TTDS/cw3/ttds_cw3/myproject/myproject
+writing pidfile to uwsgi.pid
+detected binary path: /opt/homebrew/Cellar/uwsgi/2.0.19.1_2/bin/uwsgi
+chdir() to /Users/zihaozeng/Desktop/TTDS/cw3/ttds_cw3/myproject
+your processes number limit is 2666
+your memory page size is 16384 bytes
+detected max file descriptor number: 256
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+The -s/--socket option is missing and stdin is not a socket.
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sat Mar  5 01:33:53 2022] ***
+compiled with version: Apple LLVM 13.0.0 (clang-1300.0.29.3) on 17 June 2020 09:03:34
+os: Darwin-21.3.0 Darwin Kernel Version 21.3.0: Wed Jan  5 21:37:58 PST 2022; root:xnu-8019.80.24~20/RELEASE_ARM64_T8101
+nodename: pc-201-82.customer.ask4.lan
+machine: arm64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /Users/zihaozeng/Desktop/TTDS/cw3/ttds_cw3/myproject/myproject
+writing pidfile to uwsgi.pid
+detected binary path: /opt/homebrew/Cellar/uwsgi/2.0.19.1_2/bin/uwsgi
+chdir() to /Users/zihaozeng/Desktop/TTDS/cw3/ttds_cw3/myproject
+your processes number limit is 2666
+your memory page size is 16384 bytes
+detected max file descriptor number: 256
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+The -s/--socket option is missing and stdin is not a socket.
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sat Mar  5 01:36:38 2022] ***
+compiled with version: Apple LLVM 13.0.0 (clang-1300.0.29.3) on 17 June 2020 09:03:34
+os: Darwin-21.3.0 Darwin Kernel Version 21.3.0: Wed Jan  5 21:37:58 PST 2022; root:xnu-8019.80.24~20/RELEASE_ARM64_T8101
+nodename: pc-201-82.customer.ask4.lan
+machine: arm64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /Users/zihaozeng/Desktop/TTDS/cw3/ttds_cw3/myproject/myproject
+writing pidfile to uwsgi.pid
+detected binary path: /opt/homebrew/Cellar/uwsgi/2.0.19.1_2/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /Users/zihaozeng/Desktop/TTDS/cw3/ttds_cw3/myproject
+your processes number limit is 2666
+your memory page size is 16384 bytes
+detected max file descriptor number: 256
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+The -s/--socket option is missing and stdin is not a socket.
+*** Starting uWSGI 2.0.20 (64bit) on [Sat Mar  5 01:40:34 2022] ***
+compiled with version: Apple LLVM 13.0.0 (clang-1300.0.29.30) on 17 February 2022 21:14:36
+os: Darwin-21.3.0 Darwin Kernel Version 21.3.0: Wed Jan  5 21:37:58 PST 2022; root:xnu-8019.80.24~20/RELEASE_ARM64_T8101
+nodename: pc-201-82.customer.ask4.lan
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /Users/zihaozeng/Desktop/TTDS/cw3/ttds_cw3/myproject/myproject
+writing pidfile to uwsgi.pid
+detected binary path: /Users/zihaozeng/opt/anaconda3/envs/ttds_cw/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /Users/zihaozeng/Desktop/TTDS/cw3/ttds_cw3/myproject
+your processes number limit is 2666
+your memory page size is 4096 bytes
+detected max file descriptor number: 256
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8000 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:49806 (port auto-assigned) fd 3
+Python version: 3.7.11 (default, Jul 27 2021, 07:03:16)  [Clang 10.0.0 ]
+Python main interpreter initialized at 0x7fa16a106d40
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416640 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+Traceback (most recent call last):
+  File "./myproject/wsgi.py", line 12, in <module>
+    from django.core.wsgi import get_wsgi_application
+  File "/Users/zihaozeng/opt/anaconda3/envs/ttds_cw/lib/python3.7/site-packages/django/__init__.py", line 1, in <module>
+    from django.utils.version import get_version
+  File "/Users/zihaozeng/opt/anaconda3/envs/ttds_cw/lib/python3.7/site-packages/django/utils/version.py", line 1, in <module>
+    import datetime
+  File "/Users/zihaozeng/opt/anaconda3/envs/ttds_cw/lib/python3.7/datetime.py", line 8, in <module>
+    import math as _math
+ImportError: dlopen(/Users/zihaozeng/opt/anaconda3/envs/ttds_cw/lib/python3.7/lib-dynload/math.cpython-37m-darwin.so, 0x0002): symbol not found in flat namespace '_PyExc_MemoryError'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+Traceback (most recent call last):
+  File "myproject/wsgi.py", line 12, in <module>
+    from django.core.wsgi import get_wsgi_application
+  File "/Users/zihaozeng/opt/anaconda3/envs/ttds_cw/lib/python3.7/site-packages/django/__init__.py", line 1, in <module>
+    from django.utils.version import get_version
+  File "/Users/zihaozeng/opt/anaconda3/envs/ttds_cw/lib/python3.7/site-packages/django/utils/version.py", line 1, in <module>
+    import datetime
+  File "/Users/zihaozeng/opt/anaconda3/envs/ttds_cw/lib/python3.7/datetime.py", line 8, in <module>
+    import math as _math
+ImportError: dlopen(/Users/zihaozeng/opt/anaconda3/envs/ttds_cw/lib/python3.7/lib-dynload/math.cpython-37m-darwin.so, 0x0002): symbol not found in flat namespace '_PyExc_MemoryError'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 57625)
+spawned uWSGI worker 1 (pid: 57626, cores: 2)
+spawned uWSGI worker 2 (pid: 57627, cores: 2)
+spawned uWSGI worker 3 (pid: 57628, cores: 2)
+spawned uWSGI worker 4 (pid: 57629, cores: 2)
+spawned uWSGI http 1 (pid: 57630)
+--- no python application found, check your startup logs for errors ---
+[pid: 57629|app: -1|req: -1/1] 127.0.0.1 () {36 vars in 697 bytes} [Sat Mar  5 01:53:25 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 57628|app: -1|req: -1/2] 127.0.0.1 () {36 vars in 649 bytes} [Sat Mar  5 01:53:25 2022] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 57628|app: -1|req: -1/3] 127.0.0.1 () {38 vars in 708 bytes} [Sat Mar  5 01:57:05 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 57629|app: -1|req: -1/4] 127.0.0.1 () {38 vars in 708 bytes} [Sat Mar  5 01:57:08 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 57629|app: -1|req: -1/5] 127.0.0.1 () {52 vars in 1048 bytes} [Sat Mar  5 02:04:57 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 57630)
+worker 4 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.20 (64bit) on [Sat Mar  5 02:13:15 2022] ***
+compiled with version: Apple LLVM 13.0.0 (clang-1300.0.29.30) on 17 February 2022 21:14:36
+os: Darwin-21.3.0 Darwin Kernel Version 21.3.0: Wed Jan  5 21:37:58 PST 2022; root:xnu-8019.80.24~20/RELEASE_ARM64_T8101
+nodename: pc-201-82.customer.ask4.lan
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /Users/zihaozeng/Desktop/TTDS/cw3/ttds_cw3/myproject/myproject
+writing pidfile to uwsgi.pid
+detected binary path: /Users/zihaozeng/opt/anaconda3/envs/ttds_cw/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /Users/zihaozeng/Desktop/TTDS/cw3/ttds_cw3/myproject
+your processes number limit is 2666
+your memory page size is 4096 bytes
+detected max file descriptor number: 256
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+bind(): Can't assign requested address [core/socket.c line 769]
+*** Starting uWSGI 2.0.20 (64bit) on [Sat Mar  5 02:14:10 2022] ***
+compiled with version: Apple LLVM 13.0.0 (clang-1300.0.29.30) on 17 February 2022 21:14:36
+os: Darwin-21.3.0 Darwin Kernel Version 21.3.0: Wed Jan  5 21:37:58 PST 2022; root:xnu-8019.80.24~20/RELEASE_ARM64_T8101
+nodename: pc-201-82.customer.ask4.lan
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /Users/zihaozeng/Desktop/TTDS/cw3/ttds_cw3/myproject/myproject
+writing pidfile to uwsgi.pid
+detected binary path: /Users/zihaozeng/opt/anaconda3/envs/ttds_cw/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /Users/zihaozeng/Desktop/TTDS/cw3/ttds_cw3/myproject
+your processes number limit is 2666
+your memory page size is 4096 bytes
+detected max file descriptor number: 256
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 0.0.0.0:8000 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:58099 (port auto-assigned) fd 3
+Python version: 3.7.11 (default, Jul 27 2021, 07:03:16)  [Clang 10.0.0 ]
+Python main interpreter initialized at 0x7f8a2b005870
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416640 bytes (406 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+Traceback (most recent call last):
+  File "./myproject/wsgi.py", line 12, in <module>
+    from django.core.wsgi import get_wsgi_application
+  File "/Users/zihaozeng/opt/anaconda3/envs/ttds_cw/lib/python3.7/site-packages/django/__init__.py", line 1, in <module>
+    from django.utils.version import get_version
+  File "/Users/zihaozeng/opt/anaconda3/envs/ttds_cw/lib/python3.7/site-packages/django/utils/version.py", line 1, in <module>
+    import datetime
+  File "/Users/zihaozeng/opt/anaconda3/envs/ttds_cw/lib/python3.7/datetime.py", line 8, in <module>
+    import math as _math
+ImportError: dlopen(/Users/zihaozeng/opt/anaconda3/envs/ttds_cw/lib/python3.7/lib-dynload/math.cpython-37m-darwin.so, 0x0002): symbol not found in flat namespace '_PyExc_MemoryError'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+Traceback (most recent call last):
+  File "myproject/wsgi.py", line 12, in <module>
+    from django.core.wsgi import get_wsgi_application
+  File "/Users/zihaozeng/opt/anaconda3/envs/ttds_cw/lib/python3.7/site-packages/django/__init__.py", line 1, in <module>
+    from django.utils.version import get_version
+  File "/Users/zihaozeng/opt/anaconda3/envs/ttds_cw/lib/python3.7/site-packages/django/utils/version.py", line 1, in <module>
+    import datetime
+  File "/Users/zihaozeng/opt/anaconda3/envs/ttds_cw/lib/python3.7/datetime.py", line 8, in <module>
+    import math as _math
+ImportError: dlopen(/Users/zihaozeng/opt/anaconda3/envs/ttds_cw/lib/python3.7/lib-dynload/math.cpython-37m-darwin.so, 0x0002): symbol not found in flat namespace '_PyExc_MemoryError'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 60236)
+spawned uWSGI worker 1 (pid: 60237, cores: 2)
+spawned uWSGI worker 2 (pid: 60238, cores: 2)
+spawned uWSGI worker 3 (pid: 60239, cores: 2)
+spawned uWSGI worker 4 (pid: 60240, cores: 2)
+spawned uWSGI http 1 (pid: 60241)
+--- no python application found, check your startup logs for errors ---
+[pid: 60237|app: -1|req: -1/1] 127.0.0.1 () {38 vars in 707 bytes} [Sat Mar  5 02:14:18 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 60240|app: -1|req: -1/2] 127.0.0.1 () {38 vars in 708 bytes} [Sat Mar  5 02:14:23 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 60237|app: -1|req: -1/3] 127.0.0.1 () {38 vars in 708 bytes} [Sat Mar  5 02:14:27 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 60240|app: -1|req: -1/4] 127.0.0.1 () {52 vars in 1049 bytes} [Sat Mar  5 02:14:37 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 60237|app: -1|req: -1/5] 127.0.0.1 () {38 vars in 708 bytes} [Sat Mar  5 02:29:38 2022] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+gateway "uWSGI http 1" has been buried (pid: 60241)
+...brutally killing workers...
+worker 4 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /Users/zihaozeng/Desktop/TTDS/cw3/ttds_cw3/myproject/myproject
+closing all non-uwsgi socket fds > 2 (max_fd = 256)...
+found fd 3 mapped to socket 0 (127.0.0.1:58099)
+running /Users/zihaozeng/opt/anaconda3/envs/ttds_cw/bin/uwsgi
+realpath() of uwsgi.ini failed: Operation not permitted [core/utils.c line 3662]

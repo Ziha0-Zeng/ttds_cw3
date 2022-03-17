@@ -7,7 +7,6 @@
             <img src="../assets/search.png" class="search_img">
             <input type="text" name = "query" v-model="query">
             <button @click="send_query()"> Search </button>
-            
         </div>
     </div>
     
@@ -20,27 +19,24 @@ export default {
     data(){
         return {
             query:"",
+            firstLoad:0
 		}
     },
     methods: {
 		send_query(){
             if(this.query.length > 0){
-                // submit the query
-                // this.$router.push ({
-                //     name: 'searchPage',
-                //     query:{
-                //         query:this.query,
-                //     }
-                // })
-                // axios.get(`https://api.github.com/search/users?q=${this.query}`).then(
-                //     response => {
-                //         console.log("success", response.data);
-                //         this.$bus.$emit('getUsers', response.data.items);
-                //     },
-                //     error => { 
-                //         console.log("fail", error.message);
-                //     }
-                // )
+                //submit the query
+                if(this.firstLoad !== 0){
+                    if(this.$route.query.query !== this.query){
+                        this.$router.push ({
+                            name: 'searchPage',
+                            query:{
+                                query:this.query,
+                            }
+                        })
+                    }
+                }
+
                 axios.get(`http://localhost:8000/myapp/search?query=${this.query}`).then(
                     response => {
                         console.log("success", response.data);
@@ -59,8 +55,24 @@ export default {
         if(this.query.length > 0){
             this.send_query()
         }
-        
+        if(this.firstLoad === 0){
+            this.firstLoad = 1
+        }
     },
+
+    watch: {
+        $route: {
+            handler:  function (val){
+                this.query = val.query.query;
+                document.title = this.query + ' - Search'
+                this.send_query();
+                
+            },
+            // 深度观察监听
+        deep:  true
+   }
+},
+
     
 }
 </script>

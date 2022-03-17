@@ -26,16 +26,22 @@
                     </el-col>
                 </el-row>
                 <el-row>
-                    <el-col :span="12">
-                        <el-form-item label="From">
-                            <el-date-picker type="date" placeholder="Start date" v-model="sizeForm.startDate" style="width:200px" value-format="yyyy-MM-dd"></el-date-picker>
+                    <el-col :span="20">
+                        <el-form-item label="Date">
+                            <el-date-picker
+                                v-model="sizeForm.dateRange"
+                                type="daterange"
+                                range-separator="to"
+                                start-placeholder="Start Date"
+                                end-placeholder="End Date"
+                                style="width:300px"
+                                format="yyyy-MM-dd"
+                                value-format="yyyy-MM-dd"
+                            >
+                            </el-date-picker>
                         </el-form-item>
                     </el-col>
-                    <el-col :span="12">
-                        <el-form-item label="To">
-                            <el-date-picker type="date" placeholder="End date" v-model="sizeForm.endDate" style="width:200px" value-format="yyyy-MM-dd"></el-date-picker>
-                        </el-form-item>
-                    </el-col>  
+                    
                 </el-row>
                 
                 <el-form-item size="large">
@@ -52,52 +58,79 @@
     export default {
         name:'AdvancedSearch',
         data() {
-        return {
-            sizeForm: {
-                authors: '',
-                keywords: '',
-                startDate: '',
-                endDate:'',
-            },
-            value: false
-        };
+            return {
+                sizeForm: {
+                    authors: '',
+                    keywords: '',
+                    startDate: '',
+                    endDate:'',
+                    dateRange:'',
+                },
+                value: false,
+                startTime: {
+
+                    disabledDate: time => {
+                        let endDateVal = this.sizeForm.endDate;
+                        console.log("start" + this.sizeForm.endDate);
+                        if (endDateVal!="") {
+                            return time.getTime() > new Date(endDateVal).getTime();
+                        }
+                    }
+                },
+                endTime: {
+                    disabledDate: time => {
+                        let startDateVal = this.sizeForm.startDate;
+                        console.log("end"+this.sizeForm.startDate);
+                        if (startDateVal!="") {
+                            return time.getTime() < new Date(startDateVal).getTime();
+                        }
+                    }
+                }
+            };
         },
         methods: {
-        onSubmit() {
-            console.log('submit!');
-            if(this.sizeForm.keywords.length > 0){
-                this.$router.push ({
-                    name: 'searchPage',
-                    query:{
-                        query:this.sizeForm.keywords,
-                        authors:this.sizeForm.authors,
-                        startDate:this.sizeForm.startDate,
-                        endDate:this.sizeForm.endDate
-                    }
-                })
+            onSubmit() {
+                console.log('submit!');
+                if(this.sizeForm.keywords.length > 0){
+                    this.$router.push ({
+                        name: 'searchPage',
+                        query:{
+                            query:this.sizeForm.keywords,
+                            authors:this.sizeForm.authors,
+                            startDate:this.sizeForm.startDate,
+                            endDate:this.sizeForm.endDate
+                        }
+                    })
 
-                // submit the query
-                axios.get(
-                    `http://localhost:8000/myapp/advancedSearch/?keyword=${this.sizeForm.keywords}&authors=${this.sizeForm.authors}&startDate=${this.sizeForm.startDate}&endDate=${this.sizeForm.endDate}`
-                    ).then(
-                    response => {
-                        console.log("success", response.data);
-                        this.$bus.$emit('getUsers', response.data);
-                    },
-                    error => { 
-                        console.log("fail", error.message);
-                    }
-                )
+                    // submit the query
+                    axios.get(
+                        `http://localhost:8000/myapp/advancedSearch/?keyword=${this.sizeForm.keywords}&authors=${this.sizeForm.authors}&startDate=${this.sizeForm.startDate}&endDate=${this.sizeForm.endDate}`
+                        ).then(
+                        response => {
+                            console.log("success", response.data);
+                            this.$bus.$emit('getUsers', response.data);
+                        },
+                        error => { 
+                            console.log("fail", error.message);
+                        }
+                    )
+                }
+
+            },
+            resetForm(){
+                this.sizeForm.authors='';
+                this.sizeForm.keywords='';
+                this.sizeForm.startDate='';
+                this.sizeForm.endDate='';
+            },
+
+        },
+
+        watch:{
+            "sizeForm.dateRange": function(newVal){
+                this.sizeForm.startDate=newVal[0]
+                this.sizeForm.endDate=newVal[1]
             }
-
-        },
-        resetForm(){
-            this.sizeForm.authors='';
-            this.sizeForm.keywords='';
-            this.sizeForm.startDate='';
-            this.sizeForm.endDate='';
-        },
-
         }
     };
 </script>
